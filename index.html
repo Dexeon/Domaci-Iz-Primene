@@ -1,7 +1,8 @@
 <html>
 
 <head>
-		<title>JAVASCRIPT JQUERY AJAX</title>
+		<meta charset="UTF-8" />
+		<title>Домаћи јQuery и АЈАХ</title>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -12,6 +13,8 @@
 		<center><h1>Домаћи jQuery и АЈАХ</h1></center>
 
 		<center><button id="dugme1">Промени Боју</button></center>
+		<br>		
+		<center><button id="dugme2">Покрени АЈАХ</button></center>
 
 	</body>
 
@@ -20,11 +23,18 @@
 
 <script>
 $(document).ready(function(){
+
 	$('#dugme1').click(function(){
 		$('h1').css('color','green');
 		$('h1').css('font-size','100px');
+		$('h1').after('<h2>AJAX информације:</h2>');
 		
-		
+	});
+
+	$('#dugme2').click(function(){
+			$.get("domaci/Domaci-Iz-Primene/folder/lokacija.php", function(data){
+    				$('h2').after('<center>'+data+'</center>');
+  			});
 	});
 });
 
