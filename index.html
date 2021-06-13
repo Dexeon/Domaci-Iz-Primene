@@ -7,12 +7,25 @@
 
 </head>
 	
-<body>
+	<body>
 
+		<center><h1>Домаћи jQuery и АЈАХ</h1></center>
 
+		<center><button id="dugme1">Промени Боју</button></center>
 
-
-</body>
+	</body>
 
 
 </html>
+
+<script>
+$(document).ready(function(){
+	$('#dugme1').click(function(){
+		$('h1').css('color','green');
+		$('h1').css('font-size','100px');
+		
+		
+	});
+});
+
+</script>
